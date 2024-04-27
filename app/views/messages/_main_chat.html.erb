@@ -4,20 +4,7 @@
     <a class="room_finish_btn btn" href="#">チャットを終了する</a>
   </div>
   <div class="chat_area">
-    <div class="chat_contents">
-      <div class="contents_head">
-        <div class="contributor">アメリカ人</div>
-        <div class="post_time">##########</div>
-      </div>
-      <div class="contents_text">完璧な統語論</div>
-    </div>
-    <div class="chat_contents">
-      <div class="contents_head">
-        <div class="contributor">部屋の外</div>
-        <div class="post_time">##########</div>
-      </div>
-      <div class="contents_text">意味論</div>
-    </div>
+    <%= render partial: 'message', collection: @messages %>
   </div>
   <div class="chat_foot">
     <%= form_with model: [@room, @message], html: {class: "post_form"}, local: true do |f| %>
