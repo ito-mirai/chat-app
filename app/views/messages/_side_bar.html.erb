@@ -6,7 +6,8 @@
   <div class="side_line">
     <div class="room_name_index">
       <% current_user.rooms.each do |room| %>
-        <a class="room_name btn" href="#"><%= room.name %></a>
+        <%= link_to room.name ,room_messages_path(room) ,class: "room_name btn"%>
+        <%# <a class="room_name btn" href="#"><%= room.name %></a>
       <% end %>
     </div>
   </div>
